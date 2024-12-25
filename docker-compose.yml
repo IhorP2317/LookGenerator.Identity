@@ -1,0 +1,6 @@
+﻿services:
+  lookgenerator.webapi:
+    image: lookgenerator.webapi
+    build:
+      context: .
+      dockerfile: LookGenerator.WebAPI/Dockerfile

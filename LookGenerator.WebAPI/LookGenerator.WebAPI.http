@@ -1,0 +1,6 @@
+@LookGenerator.WebAPI_HostAddress = http://localhost:5204
+
+GET {{LookGenerator.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
