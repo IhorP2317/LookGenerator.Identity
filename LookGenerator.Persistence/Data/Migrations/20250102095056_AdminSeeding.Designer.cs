@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace LookGenerator.Persistence.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241225171717_ApplicationUserSeeding")]
-    partial class ApplicationUserSeeding
+    [Migration("20250102095056_AdminSeeding")]
+    partial class AdminSeeding
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,7 +29,8 @@ namespace LookGenerator.Persistence.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("uuid")
+                        .HasDefaultValueSql("uuid_generate_v4()");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
@@ -97,13 +98,13 @@ namespace LookGenerator.Persistence.Data.Migrations
                         {
                             Id = new Guid("226b1dad-0065-44c6-acef-93186e7cd0f2"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e776d7ee-27c0-49f4-b537-fe46e6b63116",
+                            ConcurrencyStamp = "7a5b703c-d0fd-4a19-bf0e-9a414d2403c0",
                             Email = "mrsplash2356@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MRSPLASH2356@GMAIL.COM",
                             NormalizedUserName = "IHOR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOKYhGWVaehJHAu1LXdA75F9+7oHaLAW4L4assrn9+PT4Pj8yh8cJQTBkk11ByC0Qg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAED+CINWmNG14PdojmRdmZMeXsd504RFCq004BHVucOUJhgSUyjytOhuJ9aHK/CJHuw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "7f6b6c59-b6a1-4f78-8d9c-3b02cf4706a6",
                             TwoFactorEnabled = false,
@@ -115,7 +116,8 @@ namespace LookGenerator.Persistence.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("uuid")
+                        .HasDefaultValueSql("uuid_generate_v4()");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()

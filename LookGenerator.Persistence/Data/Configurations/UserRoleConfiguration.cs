@@ -11,7 +11,7 @@ namespace LookGenerator.Persistence.Data.Configurations ;
         {
             builder.HasData(new IdentityUserRole<Guid>
             {
-                UserId = adminSettings.Id,
+                UserId =  adminSettings.Id,
                 RoleId = roleSettings.Id
             });
         }

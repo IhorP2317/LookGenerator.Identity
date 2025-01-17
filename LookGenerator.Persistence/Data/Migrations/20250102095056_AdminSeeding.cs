@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LookGenerator.Persistence.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class ApplicationUserSeeding : Migration
+    public partial class AdminSeeding : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,7 +14,7 @@ namespace LookGenerator.Persistence.Data.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { new Guid("226b1dad-0065-44c6-acef-93186e7cd0f2"), 0, "e776d7ee-27c0-49f4-b537-fe46e6b63116", "mrsplash2356@gmail.com", true, false, null, "MRSPLASH2356@GMAIL.COM", "IHOR", "AQAAAAIAAYagAAAAEOKYhGWVaehJHAu1LXdA75F9+7oHaLAW4L4assrn9+PT4Pj8yh8cJQTBkk11ByC0Qg==", null, false, null, "7f6b6c59-b6a1-4f78-8d9c-3b02cf4706a6", false, "Ihor" });
+                values: new object[] { new Guid("226b1dad-0065-44c6-acef-93186e7cd0f2"), 0, "7a5b703c-d0fd-4a19-bf0e-9a414d2403c0", "mrsplash2356@gmail.com", true, false, null, "MRSPLASH2356@GMAIL.COM", "IHOR", "AQAAAAIAAYagAAAAED+CINWmNG14PdojmRdmZMeXsd504RFCq004BHVucOUJhgSUyjytOhuJ9aHK/CJHuw==", null, false, null, "7f6b6c59-b6a1-4f78-8d9c-3b02cf4706a6", false, "Ihor" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

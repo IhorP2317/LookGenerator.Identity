@@ -11,6 +11,8 @@ namespace LookGenerator.Persistence.Data.Configurations ;
     {
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
+            builder.Property(au => au.Id)
+                .HasDefaultValueSql("uuid_generate_v4()");
             var appUser = new ApplicationUser
             {
                 Id = adminSettings.Id,

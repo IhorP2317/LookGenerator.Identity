@@ -10,7 +10,7 @@ using Microsoft.Extensions.Options;
 namespace LookGenerator.Persistence.Data ;
 
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IOptions<List<RoleSettings>> roleSettings, IOptions<AdminSettings> adminSettings )
-        : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>(options)
+       : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>(options)
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

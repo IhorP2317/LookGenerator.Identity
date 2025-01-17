@@ -6,9 +6,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
       <UserSecretsId>796f88b3-7a24-455a-8f81-7ce4526ebf2b</UserSecretsId>
+        <PreserveCompilationContext>true</PreserveCompilationContext>
   </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FastEndpoints" Version="5.33.0" />
+        <PackageReference Include="FastEndpoints.Security" Version="5.33.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
           <PrivateAssets>all</PrivateAssets>
@@ -25,6 +28,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\LookGenerator.Application\LookGenerator.Application.csproj" />
+      <ProjectReference Include="..\LookGenerator.Infrastructure\LookGenerator.Infrastructure.csproj" />
       <ProjectReference Include="..\LookGenerator.Persistence\LookGenerator.Persistence.csproj" />
     </ItemGroup>
 </Project>

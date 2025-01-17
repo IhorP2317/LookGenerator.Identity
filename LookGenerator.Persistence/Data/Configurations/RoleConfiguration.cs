@@ -10,6 +10,8 @@ namespace LookGenerator.Persistence.Data.Configurations ;
     {
         public void Configure(EntityTypeBuilder<IdentityRole<Guid>> builder)
         {
+            builder.Property(r => r.Id)
+                .HasDefaultValueSql("uuid_generate_v4()");
             builder.HasData(
                 roleSettings.Select(role => new IdentityRole<Guid>
                 {

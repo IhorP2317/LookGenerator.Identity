@@ -1,14 +1,19 @@
+using Application;
+using FastEndpoints;
+using LookGenerator.Infrastructure;
 using LookGenerator.Persistence;
-using LookGenerator.Persistence.Settings;
+using LookGenerator.WebAPI;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-    builder.Services.AddOpenApi();
     builder.Configuration.AddUserSecrets<Program>();
+    builder.Services.ConfigureWebApi(builder.Configuration);
+    builder.Services.ConfigureApplication();
     builder.Services.ConfigurePersistence(builder.Configuration);
+    builder.Services.ConfigureInfrastructure(builder.Configuration, builder.Environment);
     var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -17,8 +22,11 @@ var builder = WebApplication.CreateBuilder(args);
         app.MapOpenApi();
         app.MapScalarApiReference();
     }
-
-    app.UseHttpsRedirection();
-
+    app
+        .UseExceptionHandler()
+        .UseCors("AllowAny")
+        .UseAuthentication() 
+        .UseAuthorization()
+        .UseFastEndpoints();
     app.Run();
     

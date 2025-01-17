@@ -1,0 +1,15 @@
+﻿@model Application.Models.ConfirmAccountEmailModel
+@{
+   
+    Layout = "BaseEmailLayout.cshtml";
+
+    
+    ViewBag.Title = "Confirm Your Account";
+}
+<html>
+    <h1>Hello @Model.UserName,</h1>
+    <p>
+        Thank you for registering. Please confirm your account by clicking:
+        <a href="@Model.ConfirmationLink">Confirm Account</a>
+    </p>
+</html>
