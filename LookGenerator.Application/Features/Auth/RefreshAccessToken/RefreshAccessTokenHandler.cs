@@ -1,5 +1,5 @@
 ﻿using Application.Abstractions;
-using Application.DTOs;
+using Application.Common.DTOs;
 
 namespace Application.Features.Auth.RefreshAccessToken ;
 

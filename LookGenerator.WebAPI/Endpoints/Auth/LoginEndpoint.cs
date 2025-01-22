@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.Common.DTOs;
 using Application.Features.Auth.Login;
 using FastEndpoints;
 using MediatR;

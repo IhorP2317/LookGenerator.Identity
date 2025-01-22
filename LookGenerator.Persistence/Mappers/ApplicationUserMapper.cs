@@ -1,5 +1,4 @@
-﻿using Application.DTOs;
-
+﻿using Application.Common.DTOs;
 
 namespace LookGenerator.Persistence.Mappers ;
 

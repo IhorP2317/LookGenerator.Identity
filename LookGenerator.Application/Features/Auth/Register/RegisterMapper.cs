@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.Common.DTOs;
 using Riok.Mapperly.Abstractions;
 
 namespace Application.Features.Auth ;

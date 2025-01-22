@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using Application.Abstractions;
-using Application.DTOs;
+using Application.Common.DTOs;
 using LookGenerator.Persistence.Mappers;
 using LookGenerator.Persistence.Settings;
 using Microsoft.AspNetCore.Identity;
@@ -25,12 +25,11 @@ namespace LookGenerator.Persistence.Services ;
             logger.LogInformation(_authSettings.SecretKey);
             var key = Encoding.ASCII.GetBytes(_authSettings.SecretKey);
             var roles = await userManager.GetRolesAsync(userDto.ToApplicationUser());
-            var claimsIdentity = new ClaimsIdentity(new[]
-            {
+            var claimsIdentity = new ClaimsIdentity([
                 new Claim(ClaimTypes.NameIdentifier, userDto.Id.ToString()),
                 new Claim(ClaimTypes.Email, userDto.Email),
                 new Claim(ClaimTypes.Name, userDto.UserName)
-            });
+                ]);
             var roleClaims = roles.Select(r => new Claim(ClaimTypes.Role, r));
             claimsIdentity.AddClaims(roleClaims);
             var tokenDescriptor = new SecurityTokenDescriptor

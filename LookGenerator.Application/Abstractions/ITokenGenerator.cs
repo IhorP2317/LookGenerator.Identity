@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using Application.DTOs;
+using Application.Common.DTOs;
 
 namespace Application.Abstractions ;
 

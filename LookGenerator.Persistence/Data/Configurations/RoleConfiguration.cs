@@ -12,6 +12,7 @@ namespace LookGenerator.Persistence.Data.Configurations ;
         {
             builder.Property(r => r.Id)
                 .HasDefaultValueSql("uuid_generate_v4()");
+            builder.HasIndex(r => r.Name);
             builder.HasData(
                 roleSettings.Select(role => new IdentityRole<Guid>
                 {

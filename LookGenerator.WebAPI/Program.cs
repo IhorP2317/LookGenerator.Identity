@@ -25,8 +25,8 @@ var builder = WebApplication.CreateBuilder(args);
     app
         .UseExceptionHandler()
         .UseCors("AllowAny")
-        .UseAuthentication() 
+        .UseHttpsRedirection()
+        .UseAuthentication()
         .UseAuthorization()
         .UseFastEndpoints();
     app.Run();
-    

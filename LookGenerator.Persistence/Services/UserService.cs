@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using Application.Abstractions;
-using Application.DTOs;
-using Application.Exceptions;
+using Application.Common.DTOs;
+using Application.Common.Exceptions;
 using LookGenerator.Persistence.Mappers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

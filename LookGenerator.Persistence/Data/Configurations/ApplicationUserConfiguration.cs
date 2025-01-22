@@ -13,6 +13,8 @@ namespace LookGenerator.Persistence.Data.Configurations ;
         {
             builder.Property(au => au.Id)
                 .HasDefaultValueSql("uuid_generate_v4()");
+            builder.HasIndex(au => au.Email);
+            builder.HasIndex(au => au.UserName);
             var appUser = new ApplicationUser
             {
                 Id = adminSettings.Id,

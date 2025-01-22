@@ -1,5 +1,5 @@
 ﻿using Application.Abstractions;
-using Application.Exceptions;
+using Application.Common.Exceptions;
 using Application.Models;
 using FluentEmail.Core;
 using Microsoft.AspNetCore.Hosting;
