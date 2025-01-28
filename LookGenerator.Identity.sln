@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookGenerator.Domain", "Loo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookGenerator.Application", "LookGenerator.Application\LookGenerator.Application.csproj", "{F6B85FE3-5384-4CEE-A62E-EB04D2456D5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookGenerator.Infrastructure", "LookGenerator.Infrastructure\LookGenerator.Infrastructure.csproj", "{A362BF0F-2149-43CC-97E4-8244555A27EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +37,9 @@ Global
 		{F6B85FE3-5384-4CEE-A62E-EB04D2456D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B85FE3-5384-4CEE-A62E-EB04D2456D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6B85FE3-5384-4CEE-A62E-EB04D2456D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A362BF0F-2149-43CC-97E4-8244555A27EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A362BF0F-2149-43CC-97E4-8244555A27EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A362BF0F-2149-43CC-97E4-8244555A27EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A362BF0F-2149-43CC-97E4-8244555A27EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

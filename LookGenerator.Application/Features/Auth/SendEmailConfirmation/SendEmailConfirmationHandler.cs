@@ -8,7 +8,7 @@ namespace Application.Features.Auth.SendEmailConfirmation ;
         public async Task Handle(SendEmailConfirmationCommand request, CancellationToken cancellationToken)
         {
             var user = await userService.SingleAsync(request.Email);
-            var emailConfirmationToken = userService.GenerateEmailConfirmationTokenAsync(user.Email);
+            var emailConfirmationToken = await userService.GenerateEmailConfirmationTokenAsync(user.Email);
             if(user.EmailConfirmed) return;
             await emailService.SendEmailAsync(new SendEmailOptions
             {
