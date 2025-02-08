@@ -18,5 +18,14 @@ namespace LookGenerator.Persistence.Data ;
             modelBuilder.ApplyConfiguration(new RoleConfiguration(roleSettings.Value));
             modelBuilder.ApplyConfiguration(new ApplicationUserConfiguration(adminSettings.Value));
             modelBuilder.ApplyConfiguration(new UserRoleConfiguration(adminSettings.Value, roleSettings.Value.Find(r => r.Name == "Admin")! ));
+
+            modelBuilder.Ignore<IdentityUserToken<Guid>>();
+            modelBuilder.Ignore<IdentityUserLogin<Guid>>();
+            modelBuilder.Ignore<IdentityUserClaim<Guid>>();
+            modelBuilder.Ignore<IdentityRoleClaim<Guid>>();
+            
+            modelBuilder.Entity<ApplicationUser>().ToTable("Users");
+            modelBuilder.Entity<IdentityRole<Guid>>().ToTable("Roles");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles");
         }
     }
