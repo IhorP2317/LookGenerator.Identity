@@ -14,7 +14,7 @@ namespace LookGenerator.WebAPI.Endpoints.Auth ;
 
         public override async Task HandleAsync(CancellationToken cancellationToken)
         {
-            var email = Query<string>("Email");
+            var email = Query<string>("email");
             var sendEmailConfirmationCommand = new SendEmailConfirmationCommand(email ?? "");
             await sender.Send(sendEmailConfirmationCommand, cancellationToken);
             await SendNoContentAsync(cancellationToken);

@@ -18,7 +18,7 @@ namespace Application.Features.Auth.SendEmailConfirmation ;
                 Model = new ConfirmAccountEmailModel
                 {
                     UserName = user.UserName,
-                    ConfirmationLink = $"https://localhost:7046/api/user/email/confirm?Email={request.Email}&ConfirmationToken={emailConfirmationToken}"
+                    ConfirmationLink = $"http://localhost:4200/email/confirm?email={request.Email}&token={emailConfirmationToken}"
                 }
             }, cancellationToken);
         }

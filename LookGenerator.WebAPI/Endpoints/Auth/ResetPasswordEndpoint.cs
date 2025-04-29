@@ -8,7 +8,7 @@ namespace LookGenerator.WebAPI.Endpoints.Auth ;
     {
         public override void Configure()
         {
-            Patch("/api/users/password/reset");
+            Patch("/api/user/password/reset");
             AllowAnonymous();
         }
 

@@ -17,7 +17,7 @@ namespace Application.Features.Auth.SendForgotPasswordEmail ;
                 Model = new SendForgotPasswordEmailModel
                 {
                     UserName = user.UserName,
-                    ResetPasswordLink = $"https://localhost:7046/api/user/password/reset?Email={request.Email}&PasswordResetToken={passwordResetToken}"
+                    ResetPasswordLink = $"http://localhost:4200/password/reset?email={request.Email}&token={passwordResetToken}"
                 }
                 
             }, cancellationToken);

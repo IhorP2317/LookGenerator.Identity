@@ -10,6 +10,7 @@ namespace LookGenerator.WebAPI.Endpoints.Auth ;
         public override void Configure()
         {
             Put("/api/user/token/refresh");
+            AllowAnonymous();
         }
         public override async Task HandleAsync(RefreshTokenCommand refreshTokenCommand,CancellationToken cancellationToken)
         {
